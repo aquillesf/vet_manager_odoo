@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_open_class" model="ir.actions.act_window">
+        <field name="name">Class</field>
+        <field name="res_model">animal.class</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        name="Class"
+        parent="menu_animal_settings"
+        id="menu_animal_class_tree"
+        action="action_open_class"
+        sequence="1"
+        groups = "base.group_user"
+    />
+
+    <record id="animal_class_tree_view" model="ir.ui.view">
+        <field name="name">animal.form.view</field>
+        <field name="model">animal.class</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="animal_class_form_view" model="ir.ui.view">
+        <field name="name">animal.class.form.view</field>
+        <field name="model">animal.class</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>  
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
