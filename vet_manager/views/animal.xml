@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_open_animals" model="ir.actions.act_window">
+        <field name="name">Animals</field>
+        <field name="res_model">res.animal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        name="Animal"
+        id="menu_animal_root"
+        sequence="30"
+        groups="base.group_user"/>
+
+    <menuitem 
+        name="Animals List"
+        parent="menu_animal_root"
+        id="menu_animal_tree"
+        action="action_open_animals"
+        sequence="1"/>
+
+    <menuitem 
+        name="Settings"
+        parent="menu_animal_root"
+        id="menu_animal_settings"
+        sequence="50"/>
+
+    <record id="animal_tree_view" model="ir.ui.view">
+        <field name="name">animal.tree.view</field>
+        <field name="model">res.animal</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="birthday"/>
+                <field name="age"/>
+                <field name="register_date" invisible ="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="animal_form_view" model="ir.ui.view">
+        <field name="name">animal.form.view</field>
+        <field name="model">res.animal</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>  
+                    <div>
+                        <label for="name" class = "oe_edit_only"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="birthday"/>
+                            <field name="age"/>
+                        </group>
+                        <group> 
+                            <field name="register_date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
