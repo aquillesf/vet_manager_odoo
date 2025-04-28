@@ -13,6 +13,7 @@ class ResAnimal(models.Model):
         default = fields.Date.context_today,
         readonly=True,
     )
+    partner_id = fields.Many2one(comodel_name="res.partner", string="Tutor", required=True)
 
     def compute_age(self):
         for item in self:
