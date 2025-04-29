@@ -10,7 +10,8 @@
         "views/breed.xml",
         "views/class.xml" ,
         "views/species.xml",
-        "security/ir.model.access.csv"
+        "security/ir.model.access.csv",
+        "data/animal.class.csv",
     ],  
 
     "installable": True,  

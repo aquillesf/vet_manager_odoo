@@ -14,6 +14,10 @@ class ResAnimal(models.Model):
         readonly=True,
     )
     partner_id = fields.Many2one(comodel_name="res.partner", string="Tutor", required=True)
+    class_id = fields.Many2one(comodel_name="animal.class", string="Class")
+    species_id = fields.Many2one(comodel_name="animal.species", string="Species")
+    breed_id = fields.Many2one(comodel_name="animal.breed", string="Breed")
+
 
     def compute_age(self):
         for item in self:
