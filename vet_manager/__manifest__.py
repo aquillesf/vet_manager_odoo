@@ -5,7 +5,7 @@
     "version": "17.0.1.0.1",
     "author": "aquiles",
     "depends": ["base", "web"],
-    "data": ["views/animal.xml"],  
+    "data": ["views/animal.xml", "views/breed.xml", "views/class.xml" , "views/species.xml"],  
     "installable": True,  
     "auto_install": False,
     "application": True
