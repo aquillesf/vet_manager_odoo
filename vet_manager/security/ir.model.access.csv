@@ -1,0 +1,5 @@
+"id", "name", "model_id:id", "groupid:id", "perm_read", "perm_write", "perm_create", "perm_unlink"
+res_animal_all,res_animal_all,model_res_animal,base.group_user,1,1,1,1
+animal_class_all,animal_class_all,model_res_animal,base.group_user,1,1,1,1
+animal_species_all,animal_species_all,model_animal_species,base.group_user,1,1,1,1
+animal_breed_all,animal_breed_all,model_breed_species,base.group_user,1,1,1,1
